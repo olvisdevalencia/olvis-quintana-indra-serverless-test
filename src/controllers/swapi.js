@@ -31,7 +31,7 @@ const getPeople = async (req, res) => {
     search = filters.buscar || "";
     currentPage = filters.paginaActual || 1;
 
-    let { data } = await axios
+    let data = await axios
       .get(`${endpoint}/people/?page=${currentPage}&search=${search}`)
       .then(async (data) => {
         let personas = [];
@@ -46,7 +46,9 @@ const getPeople = async (req, res) => {
         console.log(err);
       });
 
-    return res.status(StatusCodes.OK).send({ personas: data });
+    const personas = data != undefined ? data.data : [];
+
+    return res.status(StatusCodes.OK).send({ personas });
   } catch (error) {
     console.log("Error on: getPeople method", error);
     return res.status(StatusCodes.BAD_REQUEST).send(error);
