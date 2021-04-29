@@ -1,0 +1,39 @@
+{
+  "name": "olvis-quintana-indra-serverless-test",
+  "version": "1.0.0",
+  "description": "Serverless api rest, indra test",
+  "author": "OLVIS ALBERTO QUINTANA VILLANUEVA",
+  "license": "MIT",
+  "private": true,
+  "keywords": [
+    "node.js",
+    "express",
+    "serverless",
+    "swagger"
+  ],
+  "main": "handler.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "http-status-codes": "^2.1.4",
+    "knex": "^0.95.4",
+    "knex-paginate": "^2.1.0",
+    "mysql": "^2.18.1",
+    "serverless-http": "^2.7.0",
+    "swagger-ui-express": "^4.1.6"
+  },
+  "devDependencies": {
+    "serverless-offline": "^6.9.0"
+  },
+  "engines": {
+    "node": "^14"
+  },
+  "homepage": "https://github.com/olvisdevalencia/olvis-quintana-indra-serverless-test.git#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olvisdevalencia/olvis-quintana-indra-serverless-test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/olvisdevalencia/olvis-quintana-indra-serverless-test/issues"
+  }
+}

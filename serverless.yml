@@ -1,0 +1,32 @@
+org: olvisdevalencia
+app: olvis-quintana-indra-serverless-test
+service: olvis-quintana-indra-serverless-test
+
+frameworkVersion: "2"
+
+plugins:
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    noPrependStageInUrl: true
+
+package:
+  individually: true
+  excludeDevDependencies: false
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: "20201221"
+
+functions:
+  api:
+    handler: handler.handler
+    events:
+      - http:
+          path: /
+          method: ANY
+      - http:
+          path: /{proxy+}
+          method: ANY
