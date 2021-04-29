@@ -1,4 +1,3 @@
-const axios = require("axios");
 const express = require("express");
 const { StatusCodes } = require("http-status-codes");
 
@@ -9,29 +8,16 @@ const router = require("../../routes");
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", async (req, res, next) => {
-  let { data } = await axios
-    .get("https://swapi.dev/api/people")
-    .then((data) => {
-      console.log("llego o no llego ?");
-      data.data.results.filter((data) => {
-        return {
-          nombre: data.name,
-        };
-      });
-
-      return data;
-    });
-  console.log("esta es la data que trae esto XD lpm");
-  return res.status(StatusCodes.OK).send(data);
-
-  /* return res.status(StatusCodes.OK).json({
-    message: "Hello indra recruiter!",
-  }); */
+  return res.status(StatusCodes.OK).json({
+    message:
+      "Por favor verificar la documentación en: [host]/api/swagger/api-docs/",
+  });
 });
 
 app.get("/hello", (req, res, next) => {
   return res.status(StatusCodes.OK).json({
-    message: "I know you will be here!",
+    message:
+      "Por favor verificar la documentación en: [host]/api/swagger/api-docs/",
   });
 });
 
