@@ -11,6 +11,10 @@
     "serverless",
     "swagger"
   ],
+  "scripts": {
+    "deploy": "sls deploy",
+    "offline": "sls offline start --verbose"
+  },
   "main": "handler.js",
   "dependencies": {
     "axios": "^0.21.1",
