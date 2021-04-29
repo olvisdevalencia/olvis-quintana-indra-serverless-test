@@ -10,14 +10,14 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", async (req, res, next) => {
   return res.status(StatusCodes.OK).json({
     message:
-      "Por favor verificar la documentación en: [host]/api/swagger/api-docs/",
+      "Por favor verificar la documentación en: [host] /api/swagger/api-docs/",
   });
 });
 
 app.get("/hello", (req, res, next) => {
   return res.status(StatusCodes.OK).json({
     message:
-      "Por favor verificar la documentación en: [host]/api/swagger/api-docs/",
+      "Por favor verificar la documentación en: [host] /api/swagger/api-docs/",
   });
 });
 

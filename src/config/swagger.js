@@ -2,7 +2,7 @@ const {
   server: { SWAGGER, SWAGGER_FULL, SWAGGER_SCHEME },
 } = require("./index");
 
-const { personas } = require("./swagger_endpoints/index");
+const { personas, swapi } = require("./swagger_endpoints/index");
 
 const {
   Persona,
@@ -31,6 +31,7 @@ const swagger = {
   produces: ["application/json"],
   paths: {
     ...personas,
+    ...swapi,
   },
   definitions: {
     Persona,
