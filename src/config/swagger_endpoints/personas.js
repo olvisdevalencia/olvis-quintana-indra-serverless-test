@@ -21,6 +21,18 @@ const personasSwagger = {
             enum: ["0", "1"],
           },
         },
+        {
+          name: "porPagina",
+          in: "query",
+          description: "10",
+          type: "integer",
+        },
+        {
+          name: "paginaActual",
+          in: "query",
+          description: "1",
+          type: "integer",
+        },
       ],
       responses: {
         200: {
